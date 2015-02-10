@@ -3,6 +3,75 @@
     <wb-module deploy-name="chapter10">
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/" source-path="/war"/>
+        <dependent-module archiveName="spring-webmvc-portlet.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-webmvc-portlet/spring-webmvc-portlet">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-context.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-context/spring-context">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-context-support.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-context-support/spring-context-support">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-aop.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-aop/spring-aop">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-test-mvc.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-test-mvc/spring-test-mvc">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-struts.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-struts/spring-struts">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-beans.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-beans/spring-beans">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-instrument.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-instrument/spring-instrument">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-core.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-core/spring-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-webmvc-tiles3.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-webmvc-tiles3/spring-webmvc-tiles3">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-aspects.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-aspects/spring-aspects">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-webmvc.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-webmvc/spring-webmvc">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-tx.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-tx/spring-tx">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-oxm.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-oxm/spring-oxm">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-jms.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-jms/spring-jms">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-test.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-test/spring-test">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-expression.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-expression/spring-expression">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-framework-bom.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-framework-bom/spring-framework-bom">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-orm-hibernate4.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-orm-hibernate4/spring-orm-hibernate4">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-web.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-web/spring-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-instrument-tomcat.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-instrument-tomcat/spring-instrument-tomcat">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-orm.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-orm/spring-orm">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-jdbc.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-jdbc/spring-jdbc">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/chapter10/build/classes"/>
         <property name="context-root" value="chapter10"/>
     </wb-module>
