@@ -1,17 +1,25 @@
+/**
+ *  * Bookè½¯ä»¶å…¬å¸, ç‰ˆæƒæ‰€æœ‰ è¿è€…å¿…ç©¶
+ * Copyright 2010 
+ * 2010-2-18
+ */
 package com.baobaotao.withouttx.jdbc;
 
-import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.apache.commons.dbcp.BasicDataSource;
 
+/**
+ * @author é™ˆé›„å
+ * @version 1.0
+ */
 @Service("userService")
 public class UserJdbcWithoutTransManagerService {
-
 	@Autowired
-	protected JdbcTemplate jdbcTemplate;
+	private JdbcTemplate jdbcTemplate;
 
 	public void addScore(String userName, int toAdd) {
 		String sql = "UPDATE t_user u SET u.score = u.score + ? WHERE user_name =?";
@@ -26,21 +34,19 @@ public class UserJdbcWithoutTransManagerService {
 		JdbcTemplate jdbcTemplate = (JdbcTemplate) ctx.getBean("jdbcTemplate");
 		BasicDataSource basicDataSource = (BasicDataSource) jdbcTemplate
 				.getDataSource();
-		// ¼ì²éÊı¾İÔ´autoCommitµÄÉèÖÃ
+		// æ£€æŸ¥æ•°æ®æºautoCommitçš„è®¾ç½®
 		System.out.println("autoCommit:"
 				+ basicDataSource.getDefaultAutoCommit());
-
-		// ²åÈëÒ»Ìõ¼ÇÂ¼£¬³õÊ¼·ÖÊıÎª0
+		// æ’å…¥ä¸€æ¡è®°å½•ï¼Œåˆå§‹åˆ†æ•°ä¸º10
 		jdbcTemplate
 				.execute("INSERT INTO t_user(user_name,password,score,last_logon_time) VALUES('tom','123456',10,"
 						+ System.currentTimeMillis() + ")");
-		// µ÷ÓÃ¹¤×÷ÔÚÎŞÊÂÎñ»·¾³ÏÂµÄ·şÎñÀà·½·¨,½«·ÖÊıÌí¼Ó20·Ö
+		// è°ƒç”¨å·¥ä½œåœ¨æ— äº‹åŠ¡ç¯å¢ƒä¸‹çš„æœåŠ¡ç±»æ–¹æ³•,å°†åˆ†æ•°æ·»åŠ 20åˆ†
 		service.addScore("tom", 20);
-		// ²é¿´´ËÊ±ÓÃ»§µÄ·ÖÊı
+		// æŸ¥çœ‹æ­¤æ—¶ç”¨æˆ·çš„åˆ†æ•°
 		int score = jdbcTemplate
 				.queryForInt("SELECT score FROM t_user WHERE user_name ='tom'");
 		System.out.println("score:" + score);
 		jdbcTemplate.execute("DELETE FROM t_user WHERE user_name='tom'");
 	}
-
 }
