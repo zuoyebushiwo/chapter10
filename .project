@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>chapter11</name>
+	<name>chapter10</name>
 	<comment></comment>
 	<projects>
+		<project>spring-aop</project>
+		<project>spring-aspects</project>
+		<project>spring-beans</project>
+		<project>spring-context</project>
+		<project>spring-context-support</project>
+		<project>spring-core</project>
+		<project>spring-expression</project>
+		<project>spring-framework-bom</project>
+		<project>spring-instrument</project>
+		<project>spring-instrument-tomcat</project>
+		<project>spring-jdbc</project>
+		<project>spring-jms</project>
+		<project>spring-orm</project>
+		<project>spring-orm-hibernate4</project>
+		<project>spring-oxm</project>
+		<project>spring-struts</project>
+		<project>spring-test</project>
+		<project>spring-test-mvc</project>
+		<project>spring-tx</project>
+		<project>spring-web</project>
+		<project>spring-webmvc</project>
+		<project>spring-webmvc-portlet</project>
+		<project>spring-webmvc-tiles3</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
